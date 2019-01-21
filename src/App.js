@@ -14,23 +14,23 @@ class App extends Component {
       switch(button) {
         case "C":
           return (
-            <button className="button" onClick={clear.bind(this)} key={idx}>C</button>
+            <button className="button" data-key={button} onClick={clear.bind(this)} key={idx}>C</button>
             )
         case "=":
           return (
-            <button className="button" onClick={calc.bind(this, value)} key={idx}>=</button>
+            <button className="button" data-key={button} onClick={calc.bind(this, value)} key={idx}>=</button>
           )
         case "MS":
           return (
-            <button className="button" onClick={store.bind(this, value)} key={idx}>MS</button>
+            <button className="button" data-key={button} onClick={store.bind(this, value)} key={idx}>MS</button>
           )
         case "MR": 
           return (
-            <button className="button" onClick={retrieve.bind(this)} key={idx}>MR</button>
+            <button className="button" data-key={button} onClick={retrieve.bind(this)} key={idx}>MR</button>
           )
         default:
           return (
-            <button className="button" onClick={append.bind(this, button)} key={idx}>{button}</button>
+            <button className="button" data-key={button} onClick={append.bind(this, button)} key={idx}>{button}</button>
           )
       }
     })
